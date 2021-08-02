@@ -1,0 +1,15 @@
+<div class="card-container">
+  <img [src]="product.images[0].url" [alt]="product.name" />
+  <div>
+    <h3>{{ product.name }}</h3>
+    <span>{{ product.stock }}</span
+    ><span>{{ product.sku }}</span>
+  </div>
+  <div>
+    <p>
+      <span>{{ product.discount / 100 | percent }}</span
+      ><span>{{ product.price | currency: "USD":true:"2.0" }}</span>
+    </p>
+    <h3>{{ product.final_price | currency: "USD":true:"2.0" }}</h3>
+  </div>
+</div>
