@@ -1,4 +1,18 @@
 <app-sort-dropdown (sortBy)="sortProducts($event)"></app-sort-dropdown>
-<app-product-card *ngFor="let product of products" [product]="product">
-</app-product-card>
-<app-pagination (pageSelected)="page($event)"></app-pagination>
+<input type="checkbox" (change)="selectAll($event)" />
+<form class="cards-container" [formGroup]="form">
+  <div class="card-container" *ngFor="let product of products">
+    <input
+      [checked]="product.checked"
+      type="checkbox"
+      [value]="product.name"
+      (change)="onCbChange($event)"
+    />
+    <app-product-card [product]="product"> </app-product-card>
+  </div>
+</form>
+
+<app-pagination
+  [pagesQuantity]="products"
+  (pageSelected)="page($event)"
+></app-pagination>

@@ -13,6 +13,7 @@ import { PaginationComponent } from './pagination/pagination.component';
 import { ProductCardComponent } from './product-card/product-card.component';
 import { FooterComponent } from './footer/footer.component';
 import { SectionButtonComponent } from './section-button/section-button.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,13 @@ import { SectionButtonComponent } from './section-button/section-button.componen
     FooterComponent,
     SectionButtonComponent,
   ],
-  imports: [BrowserModule, HttpClientModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    HttpClientModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

@@ -11,6 +11,7 @@ export interface Products {
   createdAt?: string;
   updatedAt?: string;
   __v?: number;
+  checked?: boolean;
 }
 
 interface Image {

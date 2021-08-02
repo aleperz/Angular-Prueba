@@ -1,6 +1,7 @@
-import { EventEmitter } from '@angular/core';
+import { EventEmitter, Input } from '@angular/core';
 import { Output } from '@angular/core';
 import { Component, OnInit } from '@angular/core';
+import { Products } from '../products.interface';
 
 @Component({
   selector: 'app-pagination',
@@ -9,12 +10,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PaginationComponent implements OnInit {
   @Output() pageSelected = new EventEmitter<string>();
+  @Input() pagesQuantity: Products[] = [];
+  pages: number[] = [];
 
   constructor() {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    console.log(this.pagesQuantity.length);
 
-  page(pageNumber: string) {
-    this.pageSelected.emit(pageNumber);
+    this.pages = [...Array(Math.ceil(this.pagesQuantity.length / 4)).keys()];
+    console.log(this.pages);
+  }
+
+  page(pageNumber: number) {
+    this.pageSelected.emit(String(pageNumber));
   }
 }
