@@ -16,7 +16,8 @@ export class ProductCardComponent implements OnInit {
     final_price: 0,
     stock: 0,
   };
-  switchClass: boolean = false;
+  switchClass: boolean = true;
+  available: string = 'Disponible';
 
   constructor() {}
 
@@ -24,5 +25,10 @@ export class ProductCardComponent implements OnInit {
 
   switchFn() {
     this.switchClass = !this.switchClass;
+    if (!this.switchClass) {
+      this.available = 'No Disponible';
+    } else {
+      this.available = 'Disponible';
+    }
   }
 }

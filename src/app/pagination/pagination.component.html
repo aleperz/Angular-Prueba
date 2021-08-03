@@ -1,5 +1,14 @@
-<div *ngIf="pagesQuantity">
-  <button *ngFor="let item of pages; index as i" (click)="page(i + 1)">
-    {{ i + 1 }}
-  </button>
+<div class="pagination">
+  <div class="prev-next-button">
+    <img src="../../assets/anterior.svg" alt="" />
+    <span>Anterior</span>
+  </div>
+  <div class="numeration">
+    <button (click)="page('1')">1</button>
+    <button (click)="page('2')">2</button>
+  </div>
+  <div class="prev-next-button">
+    <span>Siguiente</span>
+    <img src="../../assets/siguiente.svg" alt="" />
+  </div>
 </div>

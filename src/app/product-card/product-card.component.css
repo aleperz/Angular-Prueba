@@ -1,12 +1,65 @@
 .card-container {
   display: flex;
+  width: 100%;
+  margin-left: 40px;
 }
 .card-container img {
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
+  border-radius: 5px;
 }
 .card-container span {
-  margin-right: 5px;
+  margin-right: 8px;
+}
+.sku {
+  color: #959595;
+}
+.info {
+  margin: 0px 10px;
+}
+.label-available {
+  display: flex;
+  align-items: center;
+}
+.info h3 {
+  font-size: 18px;
+  width: 300px;
+  margin-bottom: 5px;
+}
+.stock-container {
+  margin-bottom: 5px;
+  font-size: 15px;
+}
+
+.discount {
+  padding: 0px 4px;
+  height: 19px;
+  background-color: #ffc300;
+  color: #ffffff;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.price {
+  font-size: 18px;
+  color: #969696;
+
+  position: relative;
+}
+p {
+  margin-bottom: 10px;
+}
+.final_price {
+  font-size: 25px;
+}
+.price:before {
+  position: absolute;
+  content: "";
+  left: 0;
+  top: 50%;
+  right: 0;
+  border-top: 1px solid;
+  border-color: inherit;
+  transform: rotate(-5deg);
 }
 .switch {
   width: 22px;
@@ -20,6 +73,7 @@
   cursor: pointer;
   position: relative;
   border-radius: 12px;
+  margin-right: 5px;
 }
 
 .switch:before {
@@ -50,11 +104,21 @@
 }
 .switchOn,
 .switchOn:before {
-  background: #4cd964 !important;
+  background: #4cd964;
 }
 .switchOn:after {
-  left: 11px !important;
+  left: 11px;
 }
 .checkbox {
   display: none;
+}
+label {
+  display: flex;
+}
+label span {
+  color: #7c7b7b;
+}
+
+label span.available {
+  color: #4cd964;
 }

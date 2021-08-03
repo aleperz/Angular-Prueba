@@ -1,23 +1,31 @@
 <div class="card-container">
   <img [src]="product.images[0].url" [alt]="product.name" />
-  <div>
+  <div class="info">
     <h3>{{ product.name }}</h3>
-    <span>Stock:{{ product.stock }}</span
-    ><span>SKU:{{ product.sku }}</span>
-    <label>
+    <div class="stock-container">
+      <span>Stock:{{ product.stock }}</span
+      ><span class="sku">SKU:{{ product.sku }}</span>
+    </div>
+    <label class="label-available">
       <input type="checkbox" name="checkboxName" class="checkbox" />
       <div
         class="switch"
         (click)="switchFn()"
         [ngClass]="{ switchOn: switchClass }"
       ></div>
-    </label>
+      <span [ngClass]="{ available: switchClass }">{{ available }}</span></label
+    >
   </div>
   <div>
     <p>
-      <span>{{ product.discount / 100 | percent }}</span
-      ><span>{{ product.price | currency: "USD":true:"2.0" }}</span>
+      <span class="discount" *ngIf="product.discount"
+        >-{{ product.discount / 100 | percent }}</span
+      ><span *ngIf="product.discount" class="price">{{
+        product.price | currency: "USD":true:"2.0"
+      }}</span>
     </p>
-    <h3>{{ product.final_price | currency: "USD":true:"2.0" }}</h3>
+    <h3 class="final_price">
+      {{ product.final_price | currency: "USD":true:"2.0" }}
+    </h3>
   </div>
 </div>

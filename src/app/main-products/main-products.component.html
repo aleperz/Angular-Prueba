@@ -1,18 +1,27 @@
-<app-sort-dropdown (sortBy)="sortProducts($event)"></app-sort-dropdown>
-<input type="checkbox" (change)="selectAll($event)" />
-<form class="cards-container" [formGroup]="form">
-  <div class="card-container" *ngFor="let product of products">
-    <input
-      [checked]="product.checked"
-      type="checkbox"
-      [value]="product.name"
-      (change)="onCbChange($event)"
-    />
-    <app-product-card [product]="product"> </app-product-card>
+<div class="products-container">
+  <div class="options">
+    <div class="checkAll">
+      <input type="checkbox" (change)="selectAll($event)" id="check-all" />
+      <label for="check-all"></label>
+    </div>
+    <app-sort-dropdown (sortBy)="sortProducts($event)"></app-sort-dropdown>
   </div>
-</form>
-
-<app-pagination
-  [pagesQuantity]="products"
-  (pageSelected)="page($event)"
-></app-pagination>
+  <form class="cards-container" [formGroup]="form">
+    <div class="card-container" *ngFor="let product of products">
+      <label [for]="product._id" class="checkbox-card">
+        <input
+          [checked]="product.checked"
+          type="checkbox"
+          [value]="product.name"
+          (change)="onCbChange($event)"
+          [id]="product._id"
+        />
+        <app-product-card [product]="product"> </app-product-card>
+      </label>
+    </div>
+  </form>
+  <app-pagination
+    [pagesQuantity]="products"
+    (pageSelected)="page($event)"
+  ></app-pagination>
+</div>

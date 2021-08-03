@@ -14,6 +14,7 @@ import { ProductCardComponent } from './product-card/product-card.component';
 import { FooterComponent } from './footer/footer.component';
 import { SectionButtonComponent } from './section-button/section-button.component';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AsideOptionComponent } from './aside-option/aside-option.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +28,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     ProductCardComponent,
     FooterComponent,
     SectionButtonComponent,
+    AsideOptionComponent,
   ],
   imports: [
     BrowserModule,

@@ -22,7 +22,7 @@ export class PaginationComponent implements OnInit {
     console.log(this.pages);
   }
 
-  page(pageNumber: number) {
-    this.pageSelected.emit(String(pageNumber));
+  page(pageNumber: string) {
+    this.pageSelected.emit(pageNumber);
   }
 }

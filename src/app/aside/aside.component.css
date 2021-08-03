@@ -1,5 +1,16 @@
 .aside-container {
+  box-sizing: border-box;
   background-image: linear-gradient(#077fd7, #003860);
   width: 260px;
-  height: 940px;
+  height: 900px;
+  font-size: 18px;
+  color: #ffffff;
+  padding: 20px;
+}
+.options-container {
+  margin-top: 70px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }

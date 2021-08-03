@@ -1,0 +1,22 @@
+.footer-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border-top: solid #97979788 1.5px;
+}
+.rigth-box {
+  margin-left: 40px;
+  color: #068eef;
+}
+.rigth-box ul {
+  list-style: none;
+  display: flex;
+  margin-bottom: 20px;
+}
+li {
+  margin-right: 20px;
+}
+p {
+  margin-bottom: 20px;
+}
