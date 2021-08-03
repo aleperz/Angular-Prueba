@@ -16,7 +16,13 @@ export class ProductCardComponent implements OnInit {
     final_price: 0,
     stock: 0,
   };
+  switchClass: boolean = false;
+
   constructor() {}
 
   ngOnInit(): void {}
+
+  switchFn() {
+    this.switchClass = !this.switchClass;
+  }
 }

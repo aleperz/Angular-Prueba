@@ -18,7 +18,6 @@ export class MainProductsComponent implements OnInit {
   products: Products[] = [];
   orderValue: string = 'a';
   form!: FormGroup;
-  check: boolean = false;
 
   constructor(private productService: ProductServiceService) {}
 
@@ -26,6 +25,9 @@ export class MainProductsComponent implements OnInit {
     this.getProducts('1');
     this.form = new FormGroup({
       isArray: new FormArray([]),
+    });
+    this.productService.getFoundProducts().subscribe((dataFound) => {
+      this.products = dataFound;
     });
   }
 

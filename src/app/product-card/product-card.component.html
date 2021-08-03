@@ -2,8 +2,16 @@
   <img [src]="product.images[0].url" [alt]="product.name" />
   <div>
     <h3>{{ product.name }}</h3>
-    <span>{{ product.stock }}</span
-    ><span>{{ product.sku }}</span>
+    <span>Stock:{{ product.stock }}</span
+    ><span>SKU:{{ product.sku }}</span>
+    <label>
+      <input type="checkbox" name="checkboxName" class="checkbox" />
+      <div
+        class="switch"
+        (click)="switchFn()"
+        [ngClass]="{ switchOn: switchClass }"
+      ></div>
+    </label>
   </div>
   <div>
     <p>
