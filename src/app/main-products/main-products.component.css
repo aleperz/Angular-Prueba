@@ -23,11 +23,9 @@
   justify-content: center;
 }
 label {
-  margin-left: 20px;
+  /* margin-left: 20px; */
 }
-app-product-card {
-  margin-left: 20px;
-}
+
 /*
 label:hover {
   cursor: pointer;
@@ -43,7 +41,7 @@ span {
   border-radius: 4px;
 } */
 input {
-  margin-right: 40px;
+  /* margin-right: 40px; */
 } /* 
 input:checked + span::before {
   content: "";
